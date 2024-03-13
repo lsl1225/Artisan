@@ -126,9 +126,9 @@ namespace Artisan
                 ImGui.PushStyleVar(ImGuiStyleVar.WindowPadding, new Vector2(3f, 3f));
                 ImGui.PushStyleVar(ImGuiStyleVar.WindowMinSize, new Vector2(0f, 0f));
                 ImGui.PushStyleVar(ImGuiStyleVar.WindowBorderSize, 0f);
-                ImGui.GetFont().Scale = scale.X;
-                var oldScale = ImGui.GetIO().FontGlobalScale;
-                ImGui.GetIO().FontGlobalScale = 1f;
+                //ImGui.GetFont().Scale = scale.X;
+                //var oldScale = ImGui.GetIO().FontGlobalScale;
+                //ImGui.GetIO().FontGlobalScale = 1f;
                 ImGui.PushFont(ImGui.GetFont());
 
                 var compNode = (AtkComponentNode*)searchNode;
@@ -176,8 +176,8 @@ namespace Artisan
                 }
 
 
-                ImGui.GetFont().Scale = 1;
-                ImGui.GetIO().FontGlobalScale = oldScale;
+                //ImGui.GetFont().Scale = 1;
+                //ImGui.GetIO().FontGlobalScale = oldScale;
                 ImGui.PopFont();
                 ImGui.PopStyleVar(5);
                 //ImGui.PopStyleColor();
@@ -215,8 +215,8 @@ namespace Artisan
                     var size = new Vector2(node->Width, node->Height) * scale;
                     var center = new Vector2((position.X + size.X) / 2, (position.Y - size.Y) / 2);
 
-                    var oldScale = ImGui.GetIO().FontGlobalScale;
-                    ImGui.GetIO().FontGlobalScale = 1f * scale.X;
+                    //var oldScale = ImGui.GetIO().FontGlobalScale;
+                    //ImGui.GetIO().FontGlobalScale = 1f * scale.X;
 
                     var textSize = ImGui.CalcTextSize("Create Crafting List");
 
@@ -250,7 +250,7 @@ namespace Artisan
 
                     ImGui.End();
                     ImGui.PopStyleVar(5);
-                    ImGui.GetIO().FontGlobalScale = oldScale;
+                    //ImGui.GetIO().FontGlobalScale = oldScale;
                     ImGui.PopFont();
                     ImGui.PopStyleColor();
 
@@ -293,8 +293,8 @@ namespace Artisan
                     var size = new Vector2(node->Width, node->Height) * scale;
                     var center = new Vector2((position.X + size.X) / 2, (position.Y - size.Y) / 2);
 
-                    var oldScale = ImGui.GetIO().FontGlobalScale;
-                    ImGui.GetIO().FontGlobalScale = 1f * scale.X;
+                    //var oldScale = ImGui.GetIO().FontGlobalScale;
+                    //ImGui.GetIO().FontGlobalScale = 1f * scale.X;
 
                     var textSize = ImGui.CalcTextSize("Create Crafting List");
 
@@ -328,7 +328,7 @@ namespace Artisan
 
                     ImGui.End();
                     ImGui.PopStyleVar(5);
-                    ImGui.GetIO().FontGlobalScale = oldScale;
+                    //ImGui.GetIO().FontGlobalScale = oldScale;
                     ImGui.PopFont();
                     ImGui.PopStyleColor();
 
@@ -474,7 +474,7 @@ namespace Artisan
 
                 ImGui.PushStyleColor(ImGuiCol.WindowBg, 0);
                 float oldSize = ImGui.GetFont().Scale;
-                ImGui.GetFont().Scale *= scale.X;
+                //ImGui.GetFont().Scale *= scale.X;
                 ImGui.PushFont(ImGui.GetFont());
                 ImGui.PushStyleVar(ImGuiStyleVar.FrameRounding, 0f);
                 ImGui.PushStyleVar(ImGuiStyleVar.FramePadding, new Vector2(10f, 5f));
@@ -558,7 +558,7 @@ namespace Artisan
 
                 ImGui.End();
                 ImGui.PopStyleVar(5);
-                ImGui.GetFont().Scale = oldSize;
+                //ImGui.GetFont().Scale = oldSize;
                 ImGui.PopFont();
                 ImGui.PopStyleColor();
 
@@ -889,9 +889,9 @@ namespace Artisan
                 ImGui.PushStyleVar(ImGuiStyleVar.WindowPadding, new Vector2(3f, 3f));
                 ImGui.PushStyleVar(ImGuiStyleVar.WindowMinSize, new Vector2(0f, 0f));
                 ImGui.PushStyleVar(ImGuiStyleVar.WindowBorderSize, 0f);
-                ImGui.GetFont().Scale = scale.X;
-                var oldScale = ImGui.GetIO().FontGlobalScale;
-                ImGui.GetIO().FontGlobalScale = 1f;
+                //ImGui.GetFont().Scale = scale.X;
+                //var oldScale = ImGui.GetIO().FontGlobalScale;
+                //ImGui.GetIO().FontGlobalScale = 1f;
                 ImGui.PushFont(ImGui.GetFont());
 
                 ImGui.Begin($"###Repeat{node->NodeID}", ImGuiWindowFlags.NoScrollbar
@@ -932,8 +932,8 @@ namespace Artisan
 
                 ImGui.End();
 
-                ImGui.GetFont().Scale = 1;
-                ImGui.GetIO().FontGlobalScale = oldScale;
+                //ImGui.GetFont().Scale = 1;
+                //ImGui.GetIO().FontGlobalScale = oldScale;
                 ImGui.PopFont();
                 ImGui.PopStyleVar(5);
                 ImGui.PopStyleColor();
