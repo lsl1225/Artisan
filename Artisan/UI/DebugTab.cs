@@ -194,14 +194,14 @@ namespace Artisan.UI
 
                 if (ImGui.CollapsingHeader("IPC"))
                 {
-                    ImGui.Text($"AutoRetainer: {AutoRetainer.IsEnabled()}");
+                    ImGui.Text($"AutoRetainer: {IPC.AutoRetainer.IsEnabled()}");
                     if (ImGui.Button("Suppress"))
                     {
-                        AutoRetainer.Suppress();
+                        IPC.AutoRetainer.Suppress();
                     }
                     if (ImGui.Button("Unsuppress"))
                     {
-                        AutoRetainer.Unsuppress();
+                        IPC.AutoRetainer.Unsuppress();
                     }
 
                     ImGui.Text($"Endurance IPC: {Svc.PluginInterface.GetIpcSubscriber<bool>("Artisan.GetEnduranceStatus").InvokeFunc()}");
